@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tweeting Quote</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="">Quote</a></li>
+            <li><a href="#">Share</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ist section  -->
+    <div class="tweet-box">
+      <div class="quote-box">
+        <h2>Quote of the day</h2>
+        <blockquote id="quote">Loading...</blockquote>
+        <span id="author">Loading...</span>
+        <div>
+          <button onclick="getquote(api_url)">New Quote</button>
+          <button onclick="tweet()">Tweet</button>
+        </div>
+      </div>
+    </div>
+    <!-- anohter link share  -->
+    <!-- <div class="watsapp-box">
+      <div class="status-box">
+        <h2>Status of the day</h2>
+        <blockquote id="islami">Loading...</blockquote>
+        <div class="btn">
+          <button onclick="getquote(api_url)">New status</button>
+          <button onclick="status()">On Watsapp</button>
+        </div>
+      </div>
+    </div> -->
+    <script>
+      const quote = document.getElementById("quote");
+      const author = document.getElementById("author");
+
+      const api_url = "https://api.quotable.io/random";
+
+      async function getquote(url) {
+        const response = await fetch(url);
+        var data = await response.json();
+
+        quote.innerHTML = data.content;
+        author.innerHTML = data.author;
+      }
+      getquote(api_url);
+
+      function tweet() {
+        window.open(
+          "https://twitter.com/intent/tweet?text=" +
+            quote.innerHTML +
+            "---- by  " +
+            author.innerHTML,
+          "Tweet window",
+          "width=600",
+          "height=300"
+        );
+      }
+    </script>
+
+    <!-- watsapp-box  -->
+
+    <!-- <script>
+      const islami = document.getElementById("islami");
+      // const author = document.getElementById("author");
+
+      const api_url = "https://api.whatsapp.com/send?phone=03090611330";
+
+      async function getislami(url) {
+        const response = await fetch(url);
+        var data = await response.json();
+
+        islami.innerHTML = data.content;
+        // author.innerHTML = data.author;
+      }
+      getislami(api_url);
+
+      function status() {
+        window.open(
+          "https://web.whatsapp.com/send?phone=03090611330&text=Hi!" +
+            islami.innerHTML
+        );
+      }
+    </script> -->
+  </body>
+</html>
