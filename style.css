@@ -79,7 +79,7 @@ nav ul li a:hover {
   background-color: #7d7b7b;
   position: absolute;
   top: 55%;
-  left: -30%;
+  left: -24%;
 }
 .quote-box div {
   width: 100%;
@@ -106,15 +106,14 @@ nav ul li a:hover {
   color: black;
   border-color: blue;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
   body {
     width: 100vw;
     font-size: 1rem;
   }
   .quote-box {
-    width: 75vw;
-    margin-top: 10%;
-    padding: 0.3rem;
+    width: 77vw;
+    left: 20%;
   }
   .quote-box h2 {
     font-size: 1.4rem;
