@@ -114,6 +114,7 @@ nav ul li a:hover {
   .quote-box {
     width: 77vw;
     left: 20%;
+    margin-top:3%;
   }
   .quote-box h2 {
     font-size: 1.4rem;
