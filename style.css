@@ -73,15 +73,7 @@ nav ul li a:hover {
   position: relative;
   font-size: 0.6rem;
 }
-/* .quote-box span::before {
-  content: "";
-  width: 0.5rem;
-  height: 2px;
-  background-color: #7d7b7b;
-  position: absolute;
-  top: 55%;
-  left: -31%;
-} */
+
 .quote-box div {
   width: 100%;
   margin-top: 50px;
