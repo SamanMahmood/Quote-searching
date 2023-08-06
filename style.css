@@ -11,7 +11,7 @@ nav {
   display: flex;
   justify-content: end;
   align-items: center;
-  height: 70px;
+  height: 50px;
   width: 100vw;
   background: rgb(220, 220, 220);
 }
@@ -71,15 +71,16 @@ nav ul li a:hover {
   margin-right: 0.2rem;
   float: right;
   position: relative;
+  font-size: 0.6rem;
 }
 .quote-box span::before {
   content: "";
-  width: 1rem;
+  width: 0.5rem;
   height: 2px;
   background-color: #7d7b7b;
   position: absolute;
   top: 55%;
-  left: -24%;
+  left: -29%;
 }
 .quote-box div {
   width: 100%;
